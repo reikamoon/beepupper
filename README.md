@@ -60,7 +60,7 @@ be deciding some of the Frontend aspects.**
 
 ## Wireframes
 
-**Insert wireframe pictures here**
+![beepupper wireframe](https://i.imgur.com/mNvLcDl.png)
 
 
 ## Evaluation
@@ -80,9 +80,9 @@ be deciding some of the Frontend aspects.**
 
 ## Approval Checklist
 - [✓] If I have a team project, I wrote this proposal to represent my work and only my work
-- [ ] I have completed all the necessary parts of this proposal
-- [ ] I linked my proposal in the Spring Intensive Tracker
-hello
+- [✓] I have completed all the necessary parts of this proposal
+- [✓] I linked my proposal in the Spring Intensive Tracker
+
 ### Sign off
 
 **Student Name:**                
