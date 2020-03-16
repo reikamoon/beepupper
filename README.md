@@ -34,13 +34,13 @@ Tech Stack: Flask, MongoDB, Javascript
 be deciding some of the Frontend aspects.**
 
 ## Skateboard
-Users can add two types of lists: shopping lists, and recipes.
+**Users can add two types of lists: shopping lists, and recipes.**
 
 ## Bike
-Implement tools such as sales calculator and cooking timer.
+**Implement tools such as sales calculator and cooking timer.**
 
 ## Car
-**Add an API and search function.**
+**Add an API that will let users search for recipes (e,g: Spoonacular).**
 
 
 ## Personal Achievement Goals:
