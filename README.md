@@ -23,7 +23,7 @@ Dates 3/16-3/25
 
 ## :bee:What is BeePupper?:dog:
 BeePupper is a handy tool for those who enjoy cooking. With features such as to-do lists for recipes, shopping lists that calculates the costs of all your ingredients, and handy tools such as a sales calculator and a cooking timer.\
-BeePupper is a collab of [HolyPi]:https://github.com/HolyPi?before=Y3Vyc29yOnYyOpK5MjAxOS0wOS0wM1QyMToxNjoyNi0wNzowMM4MQ-iS&tab=repositories's CookHelper:dog: and [reikamoon]:https://github.com/reikamoon/busybee's to-do list app, :bee:busybee. 
+BeePupper is a collab of [HolyPi](https://github.com/HolyPi?before=Y3Vyc29yOnYyOpK5MjAxOS0wOS0wM1QyMToxNjoyNi0wNzowMM4MQ-iS&tab=repositories)'s CookHelper:dog: and [reikamoon](https://github.com/reikamoon/busybee)'s to-do list app, :bee:busybee. 
 
 **What you hope to achieve: To help people cook, and make a complete functional project.**
 
