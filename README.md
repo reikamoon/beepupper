@@ -19,7 +19,7 @@ Dates 3/16-3/25
 
 
 ## Description
-**Status: In progress **
+**Status: In progress**
 
 **What you hope to achieve: To help people cook, and make a complete functional project.**
 
@@ -35,7 +35,7 @@ be deciding some of the Frontend aspects.**
 **Start coding and finish “Skateboard” feature before beginning “Bike”.** 
 
 ## Bike
-**Be able to use a functional percent off calculator. ** 
+**Be able to use a functional percent off calculator.** 
 
 ## Car
 **Add an API and search function.** 
