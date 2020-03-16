@@ -4,7 +4,7 @@
 
 Dates 3/16-3/25
 
-**Names:** Joanelly Cruz, Anjelica Ambrosio, Padyn Riddell
+**Names:** Joanelly Cruz :strawberry:, Anjelica Ambrosio :ribbon:, Padyn Riddell :chicken:
 
 
 **Project Name:** BeePupper
