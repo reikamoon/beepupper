@@ -47,13 +47,13 @@ Implement tools such as sales calculator and cooking timer.
 
 **Each teammate must achieve 2 of 3 of their self-set personal achievement goals. If you're not on a team, delete the other teammate sections as needed.**
 
-### Joanelly
+### Joanelly :strawberry:
 
 1. Make an interesting and engaging user interface.
 2. Be able to implement an API.
 3. Make a functional search function.
 
-### Anjelica
+### Anjelica :ribbon:
 
 1. Create a recipe list using Javascript.
 2. Implement two databases (one for shopping lists, and the other for recipes).
@@ -88,8 +88,8 @@ Implement tools such as sales calculator and cooking timer.
 ### Sign off
 
 **Student Name:**                
-> Anjelica Ambrosio
-> Joanelly Cruz
+Anjelica Ambrosio :ribbon: /
+Joanelly Cruz :strawberry: /
 Date: March 16, 2020
 **Make School Advisor Name**
 > TBD
