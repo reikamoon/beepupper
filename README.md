@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-Test
-asa
-asfafs
-fsfa
-asdadsa
-=======
 
 # Juniors Spring Intensive Deliverable Proposal
 
@@ -32,20 +25,20 @@ Dates 3/16-3/25
 
 ## Challenges I Anticipate
 
-**For challenges, working with the database is what comes to mind. Another challenge anticipated would 
+**For challenges, working with the database is what comes to mind. Another challenge anticipated would
 be deciding some of the Frontend aspects.**
 
 ## Skateboard
 
 **Be able to have a shopping list.**
 
-**Start coding and finish “Skateboard” feature before beginning “Bike”.** 
+**Start coding and finish “Skateboard” feature before beginning “Bike”.**
 
 ## Bike
-**Be able to use a functional percent off calculator.** 
+**Be able to use a functional percent off calculator.**
 
 ## Car
-**Add an API and search function.** 
+**Add an API and search function.**
 
 
 ## Personal Achievement Goals:
@@ -75,9 +68,9 @@ be deciding some of the Frontend aspects.**
 **You must meet the following criteria in order to pass the intensive:**
 
 - Students must get proposal approved before starting the project to pass
-- SOLO 
+- SOLO
     - must score an average above a 2.5 on the [rubric]
-- TEAM 
+- TEAM
     - Must score an average above 3 on the [rubric]
     - Each individual completes 2 of the 3 personal achievement goals from their proposal
 - Pitch your product
@@ -89,7 +82,7 @@ be deciding some of the Frontend aspects.**
 - [✓] If I have a team project, I wrote this proposal to represent my work and only my work
 - [ ] I have completed all the necessary parts of this proposal
 - [ ] I linked my proposal in the Spring Intensive Tracker
-
+hello
 ### Sign off
 
 **Student Name:**                
@@ -97,4 +90,3 @@ be deciding some of the Frontend aspects.**
 **Make School Advisor Name**
 > TBD
 =======
->>>>>>> a7f4ed14c3d0a0213019511d11f1fe4c330daffb
