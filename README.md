@@ -61,9 +61,9 @@ be deciding some of the Frontend aspects.**
 
 ### Padyn :chicken:
 
-1.
-2.
-3.
+1. Implement UX/UI that is more advanced than previous projects.
+2. Be able to help implement an API.
+3. Plan out how I will split my time between backend and frontend.
 
 
 
