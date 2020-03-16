@@ -4,7 +4,7 @@
 
 Dates 3/16-3/25
 
-**Names:** Joanelly Cruz, Anjelica Ambrosio
+**Names:** Joanelly Cruz, Anjelica Ambrosio, Padyn Riddell
 
 
 **Project Name:** BeePupper
@@ -59,6 +59,13 @@ be deciding some of the Frontend aspects.**
 2. Implement two databases (one for shopping lists, and the other for recipes).
 3. Improve styling of webpages.
 
+### Padyn :chicken:
+
+1.
+2.
+3.
+
+
 
 ## Wireframes
 
@@ -90,6 +97,7 @@ be deciding some of the Frontend aspects.**
 **Student Name:**                
 Anjelica Ambrosio :ribbon: /
 Joanelly Cruz :strawberry: /
+Padyn Riddell :chicken: /
 Date: March 16, 2020
 **Make School Advisor Name**
 > TBD
