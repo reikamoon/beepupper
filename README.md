@@ -62,7 +62,7 @@ be deciding some of the Frontend aspects.**
 
 ## Wireframes
 
-![beepupper wireframe](https://i.imgur.com/mNvLcDl.png)
+![beepupper wireframe](https://imgur.com/9eC2UhB)
 
 
 ## Evaluation
