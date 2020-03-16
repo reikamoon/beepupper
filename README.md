@@ -23,7 +23,7 @@ Dates 3/16-3/25
 
 ## :bee:What is BeePupper?:dog:
 BeePupper is a handy tool for those who enjoy cooking. With features such as to-do lists for recipes, shopping lists that calculates the costs of all your ingredients, and handy tools such as a sales calculator and a cooking timer.\
-BeePupper is a collab of [HolyPi](https://github.com/HolyPi?before=Y3Vyc29yOnYyOpK5MjAxOS0wOS0wM1QyMToxNjoyNi0wNzowMM4MQ-iS&tab=repositories)'s CookHelper:dog: and [reikamoon](https://github.com/reikamoon/busybee)'s to-do list app, :bee:busybee. 
+BeePupper is a collab of [HolyPi](https://github.com/HolyPi?before=Y3Vyc29yOnYyOpK5MjAxOS0wOS0wM1QyMToxNjoyNi0wNzowMM4MQ-iS&tab=repositories)'s CookHelper:dog: and [reikamoon](https://github.com/reikamoon/busybee)'s to-do list app, :bee:busybee.
 
 **What you hope to achieve: To help people cook, and make a complete functional project.**
 
@@ -33,13 +33,10 @@ BeePupper is a collab of [HolyPi](https://github.com/HolyPi?before=Y3Vyc29yOnYyO
 be deciding some of the Frontend aspects.**
 
 ## Skateboard
-
-**Be able to have a shopping list.**
-
-**Start coding and finish “Skateboard” feature before beginning “Bike”.**
+Users can add two types of lists: shopping lists, and recipes.
 
 ## Bike
-**Be able to use a functional percent off calculator.**
+Implement tools such as sales calculator and cooking timer.
 
 ## Car
 **Add an API and search function.**
@@ -57,9 +54,9 @@ be deciding some of the Frontend aspects.**
 
 ### Anjelica
 
-1. Brush up on Javascript skills.
-2. Improving of PyMongo skills.
-3. Achieve a better FrontEnd.
+1. Create a recipe list using Javascript.
+2. Implement two databases (one for shopping lists, and the other for recipes).
+3. Improve styling of webpages.
 
 
 ## Wireframes
