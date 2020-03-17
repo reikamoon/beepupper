@@ -4,7 +4,7 @@
 
 Dates 3/16-3/25
 
-**Names:** Joanelly Cruz, Anjelica Ambrosio
+**Names:** Joanelly Cruz :strawberry:, Anjelica Ambrosio :ribbon:, Padyn Riddell :chicken:
 
 
 **Project Name:** BeePupper
@@ -21,6 +21,11 @@ Dates 3/16-3/25
 ## Description
 **Status: In progress**
 
+## :bee:What is BeePupper?:dog:
+BeePupper is a handy tool for those who enjoy cooking. With features such as to-do lists for recipes, shopping lists that calculates the costs of all your ingredients, and handy tools such as a sales calculator and a cooking timer.\
+BeePupper is a collab of [HolyPi](https://github.com/HolyPi?before=Y3Vyc29yOnYyOpK5MjAxOS0wOS0wM1QyMToxNjoyNi0wNzowMM4MQ-iS&tab=repositories)'s CookHelper:dog: and [reikamoon](https://github.com/reikamoon/busybee)'s to-do list app, :bee:busybee.\
+Tech Stack: Flask, MongoDB, Javascript
+
 **What you hope to achieve: To help people cook, and make a complete functional project.**
 
 ## Challenges I Anticipate
@@ -29,38 +34,42 @@ Dates 3/16-3/25
 be deciding some of the Frontend aspects.**
 
 ## Skateboard
-
-**Be able to have a shopping list.**
-
-**Start coding and finish “Skateboard” feature before beginning “Bike”.**
+**Users can add two types of lists: shopping lists, and recipes.**
 
 ## Bike
-**Be able to use a functional percent off calculator.**
+**Implement tools such as sales calculator and cooking timer.**
 
 ## Car
-**Add an API and search function.**
+**Add an API that will let users search for recipes (e,g: Spoonacular).**
 
 
 ## Personal Achievement Goals:
 
 **Each teammate must achieve 2 of 3 of their self-set personal achievement goals. If you're not on a team, delete the other teammate sections as needed.**
 
-### Joanelly
+### Joanelly :strawberry:
 
 1. Make an interesting and engaging user interface.
 2. Be able to implement an API.
 3. Make a functional search function.
 
-### Anjelica
+### Anjelica :ribbon:
 
-1. Brush up on Javascript skills.
-2. Improving of PyMongo skills.
-3. Achieve a better FrontEnd.
+1. Create a recipe list using Javascript.
+2. Implement two databases (one for shopping lists, and the other for recipes).
+3. Improve styling of webpages.
+
+### Padyn :chicken:
+
+1. Implement UX/UI that is more advanced than previous projects.
+2. Be able to help implement an API.
+3. Plan out how I will split my time between backend and frontend.
+
 
 
 ## Wireframes
 
-![beepupper wireframe](https://i.imgur.com/mNvLcDl.png)
+![beepupper wireframe](https://i.imgur.com/9eC2UhB.png)
 
 
 ## Evaluation
@@ -81,12 +90,15 @@ be deciding some of the Frontend aspects.**
 ## Approval Checklist
 - [✓] If I have a team project, I wrote this proposal to represent my work and only my work
 - [✓] I have completed all the necessary parts of this proposal
-- [✓] I linked my proposal in the Spring Intensive Tracker
+- [✓ ] I linked my proposal in the Spring Intensive Tracker
 
 ### Sign off
 
 **Student Name:**                
-> Name / Date
+Anjelica Ambrosio :ribbon: /
+Joanelly Cruz :strawberry: /
+Padyn Riddell :chicken: /
+Date: March 16, 2020
 **Make School Advisor Name**
 > TBD
 =======
