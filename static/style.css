@@ -5,7 +5,6 @@ body {
 	font-weight: 400;
 }
 
-
 header {
 
   text-align: center;
@@ -28,8 +27,6 @@ header {
     color: white;
     padding:0 15px;
 }
-
-
 
 #links a {
   line-height:60px;
@@ -58,3 +55,19 @@ header {
 #links a:hover, #links a.active {color:white;}
 #links a:hover::before, #links a.active::before {width:100%;}
 #links span.pe {font-size:20px; display:block;}
+
+
+footer {
+  padding: 25px 0;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: #C7CACC;
+  color: white;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
