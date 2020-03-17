@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template, request, redirect, url_for
 import requests
 import json
@@ -27,7 +26,7 @@ def home():
 # def index(): #homepage
 #     limit = request.args.get("search_limit",10) #set limit, if none then put 10
 #     search_term = request.args.get("search_result", "random") #search_term will contain search_result, else it will be random
-    
+
 #     recipe_json = get_recipe_json(search_term, RECIPE_API_KEY, limit)
 
 #     return render_template('index.html', recipe_json = recipe_json)
@@ -99,7 +98,6 @@ def edit_list(list_id):
 def list_update(list_id):
     # Save Edits to list and Update list in the database.
     product_list = lists.find_one({'_id': ObjectId(list_id)})['products']
-    print(product_list)
     product_list.append({'name': request.form.get('name'),'price': request.form.get('price'),'URL': request.form.get('url'),'image_url': request.form.get('image_url')})
     updated_list = {
         'title': request.form.get('title'),
