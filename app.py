@@ -1,3 +1,4 @@
+
 from flask import Flask, render_template, request, redirect, url_for
 import requests
 import json
@@ -12,7 +13,7 @@ db = client.get_default_database()
 lists = db.lists
 products = db.products
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='')
 
 @app.route('/')
 def home():

@@ -1,62 +1,60 @@
 body { 
-    font-family: "Roboto", sans-serif;;
-    margin: 0;
-      background: #F2E8E7;
-      font-weight: 400;
-  }
+  font-family: "Roboto", sans-serif;;
+  margin: 0;
+	background: #F2E8E7;
+	font-weight: 400;
+}
 
-  header {
 
-    text-align: center;
-    width: 100%;
+header {
 
-  }
-  
-  .banner {
-    position: fixed;
-    padding-top: 100px;
-  }
-  
-  #top {
-      position: sticky;
-      height:80px;
-      top:0;
-      left:0;
-      width:100%;
-      z-index:9999999999;
-      background: #C7CACC;
-      color: rgb(255, 255, 255);
-      padding:0 15px;
-      
-  }
-  
-  
-  
-  #links a {
-    line-height:60px;
-    display:inline-block;
-    text-transform:uppercase;
-    position:relative;
-    letter-spacing:1px;
-    font-size:12px;
-    margin:5px 12px;
-    padding:5px 0;
-    transition:0.5s ease-in-out;
-    
-  }
-  
-  #links a::before {
-    content:"";
-    bottom:20px;
-    height:2px;
-    background: white;
-    position:absolute;
-    display:block;
+  text-align: center;
+  width: 100%;
+}
+
+.banner {
+  position: fixed;
+  padding-top: 100px;
+}
+
+#top {
+    position: sticky;
+    height:80px;
+    top:0;
     left:0;
-    width:0;
-    transition:0.5s ease-in-out;
-  }
-  
-  #links a:hover, #links a.active {color:white;}
-  #links a:hover::before, #links a.active::before {width:100%;}
-  #links span.pe {font-size:20px; display:block;}  
+    width:100%;
+    z-index:9999999999;
+    background: #C7CACC;
+    color: white;
+    padding:0 15px;
+}
+
+
+
+#links a {
+  line-height:60px;
+  display:inline-block;
+  text-transform:uppercase;
+  position:relative;
+  letter-spacing:1px;
+  font-size:12px;
+  margin:5px 12px;
+  padding:5px 0;
+  transition:0.5s ease-in-out;
+}
+
+#links a::before {
+  content:"";
+  bottom:20px;
+  height:2px;
+  background: white;
+  position:absolute;
+  display:block;
+  left:0;
+  width:0;
+  transition:0.5s ease-in-out;
+}
+
+#links a:hover, #links a.active {color:white;}
+#links a:hover::before, #links a.active::before {width:100%;}
+#links span.pe {font-size:20px; display:block;}
