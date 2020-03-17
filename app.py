@@ -1,3 +1,4 @@
+
 from flask import Flask, render_template, request, redirect, url_for
 import requests
 import json
@@ -14,13 +15,14 @@ db = client.get_default_database()
 lists = db.lists
 products = db.products
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='')
 
 # RECIPE_API_KEY = os.getenv("RECIPE_API_KEY") #set the api key #get it from our invisible .ENV file
 
 @app.route('/')
 def home():
     #Home
+<<<<<<< HEAD
     return render_template('index.html')
 
 # def index(): #homepage
@@ -128,3 +130,6 @@ def about():
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=os.environ.get('PORT', 5000))
+=======
+    return render_template('index.html')
+>>>>>>> d71772c4eb21f03b95faeb202aa3904c151ddfeb
