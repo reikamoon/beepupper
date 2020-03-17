@@ -40,7 +40,7 @@ be deciding some of the Frontend aspects.**
 **Implement tools such as sales calculator and cooking timer.**
 
 ## Car
-**Add an API that will let users search for recipes (e,g: Spoonacular).**
+**Add an existing API that will let users search for recipes (e,g: Spoonacular).**
 
 
 ## Personal Achievement Goals:
@@ -63,7 +63,7 @@ be deciding some of the Frontend aspects.**
 
 1. Implement UX/UI that is more advanced than previous projects.
 2. Be able to help implement an API.
-3. Plan out how I will split my time between backend and frontend.
+3. Plan out how I will split my time between implementing both backend and frontend.
 
 
 
