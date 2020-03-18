@@ -71,3 +71,22 @@ footer {
   display: flex;
   align-items: center;
 }
+
+.maint {
+  height:20px;
+padding:10px;
+letter-spacing:0.2px;
+text-transform:lowercase;
+border-bottom:1px solid;
+font:italic normal 16px/20px 'Source Sans Pro', sans-serif;
+color: black;
+}
+
+.subt {
+  color: black;
+  text-transform:uppercase;
+  font:normal 10px/15px 'Source Sans Pro', sans-serif;
+  letter-spacing:0.5px;
+  height:15px;
+  padding:10px 0px;
+}
