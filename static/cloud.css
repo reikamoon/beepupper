@@ -3,6 +3,7 @@ CodePen Home
 Floating Cloud Background
 A PEN BY Shaw PRO */
 #Clouds {
+    opacity: 0.5;
     position: absolute;
     top: 0;
     right: 0;
@@ -17,13 +18,14 @@ A PEN BY Shaw PRO */
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
+            
   }
   @-webkit-keyframes FadeIn {
     from {
       opacity: 0;
     }
     to {
-      opacity: 1;
+      opacity: 0.5;
     }
   }
   @keyframes FadeIn {
@@ -31,10 +33,11 @@ A PEN BY Shaw PRO */
       opacity: 0;
     }
     to {
-      opacity: 1;
+      opacity: 0.5;
     }
   }
   .Cloud {
+    opacity: 0.5;
     position: absolute;
     width: 100%;
     background-repeat: no-repeat;
@@ -55,13 +58,14 @@ A PEN BY Shaw PRO */
   .Cloud.Foreground {
     height: 10%;
     min-height: 20px;
-    z-index: 3;
+    z-index: 2;
   }
   .Cloud.Background {
     height: 9.09090909%;
     min-height: 8px;
     -webkit-animation-duration: 210s;
             animation-duration: 210s;
+    
   }
   @-webkit-keyframes Float {
     from {

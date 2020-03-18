@@ -1,8 +1,8 @@
 body { 
   font-family: "Roboto", sans-serif;;
   margin: 0;
-	background: #F0F3F5;
-	font-weight: 400;
+	background-color: rgb(227, 242, 252) !important;
+  font-weight: 400;
 }
 
 header {
@@ -60,7 +60,6 @@ header {
 footer {
   padding: 25px 0;
   text-align: center;
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -70,14 +69,14 @@ footer {
   height: 10vh;
   display: flex;
   align-items: center;
+  
 }
 
 .maint {
-  height:20px;
+height:20px;
 padding:10px;
 letter-spacing:0.2px;
 text-transform:lowercase;
-border-bottom:1px solid;
 font:italic normal 16px/20px 'Source Sans Pro', sans-serif;
 color: black;
 }
@@ -89,4 +88,57 @@ color: black;
   letter-spacing:0.5px;
   height:15px;
   padding:10px 0px;
+}
+
+header {
+
+  text-align: center;
+  width: 100%;
+}
+
+.hero-image {
+  position: relative;
+  width: 1170px;
+  height: 400px;
+  background: url(/./header.png) no-repeat center;
+  background-size: cover;
+  margin: auto;
+}
+
+.container1 {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color:#003F5A;
+  font-weight: 700;
+  text-transform: uppercase;
+
+}
+
+.container h1{
+  padding-top: 150px;
+  font-size: 72px;
+  letter-spacing: 0.2em;
+  color: #003F5A;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+.cont0 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.cont {
+  
+  text-align: center;
+  padding-top: 50px;
+  background-color: white;
+  height: 1000px;
+  width: 1170px;
 }
