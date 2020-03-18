@@ -1,34 +1,4 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {margin:0;}
-
-.icon-bar {
-  width: 100%;
-  background-color: #475C7B;
-  overflow: auto;
-}
-
-.icon-bar a {
-  float: left;
-  width: 20%;
-  text-align: center;
-  padding: 12px 0;
-  transition: all 0.3s ease;
-  color: black;
-  font-size: 36px;
-}
-
-.icon-bar a:hover {
-  background-color: #475C7B;
-}
-
-.active {
-  background-color: #475C7B;
-}
-</style>
-
-
-
 
 <!-- Larger Navbar for larger pages -->
 <div id="navbar">
@@ -46,23 +16,13 @@ body {margin:0;}
 
       <!-- homepage -->
     <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <!-- to do list -->
-        <li class="nav-item">
-          <a class="nav-link" href="/recipes">Recipes</a>
-        </li>
-        <!-- shopping lists -->
-        <li class="nav-item">
-          <a class="nav-link"href="/mylists"><i class="fa fa-usd"></i> Shopping List</a>
-        </li>
-        <!-- calculator -->
-        <li class="nav-item">
-          <a class="nav-link" href="/calculator"><i class="fa fa-calculator"></i> Calculator</a>
-        </li>
-      </ul>
+      <nav id="links">
+        <a href="/">Home</a>
+        <a href="/">Recipes</a>
+        <a href="/">Shopping List</a>
+        <a href="/">Calculator</a>
+        <a href="/">Search</a>
+      </nav>
     </div>
   </nav>
 </div>
