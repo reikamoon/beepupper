@@ -3,7 +3,7 @@
 } */
 
 .particle {
-  /* position: absolute; */
+  position: absolute;
   border-radius: 10000%;
 }
 
