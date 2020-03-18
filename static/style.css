@@ -70,6 +70,7 @@ footer {
   height: 10vh;
   display: flex;
   align-items: center;
+  position: fixed;
   
 }
 
@@ -92,7 +93,6 @@ color: black;
 }
 
 header {
-
   text-align: center;
   width: 100%;
 }
@@ -127,7 +127,6 @@ header {
   text-align: center;
 }
 
-
 .cont0 {
   height: 100%;
   display: flex;
@@ -136,7 +135,6 @@ header {
 
 }
 .cont {
-  
   text-align: center;
   padding-top: 50px;
   background-color: white;
