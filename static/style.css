@@ -137,15 +137,12 @@ header {
   width: 1170px;
 }
 
-/* .jumbotron {
+.jumbotron {
   position: relative;
   width: 1170px;
-  height: 400px;
-  background: url(./header.png) no-repeat center;
-  background-size: cover;
+  height: 900px;
+  /* background: url(./header.png) no-repeat center;
+  background-size: cover; */
   margin: auto;
+  background-color: green;
 }
-
-.h3 {
-  color: green;
-} */
