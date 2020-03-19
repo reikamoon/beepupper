@@ -1,7 +1,7 @@
 body { 
   font-family: "Roboto", sans-serif;;
   margin: 0;
-	background-color: rgb(227, 242, 252) !important;
+	background-color: #F0F3F5 !important;
   font-weight: 400;
 
 }
@@ -70,7 +70,6 @@ footer {
   height: 10vh;
   display: flex;
   align-items: center;
-  position: fixed;
   
 }
 
@@ -104,6 +103,7 @@ header {
   background: url(/./header.png) no-repeat center;
   background-size: cover;
   margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .container1 {
