@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% include 'partials/navbar_b.html' %}
+
+<center>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h2 class="display-4">Features</h2>
+      <h4 class="lead">Here is some information on what to expect.</h4>
+
+      <div class="row">
+        <div class="col-lg-4 my-auto mx-auto"></div>
+      </div>
+        <div class="col-lg-8 my-auto">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="fas fa-pepper-hot text-primary"></i>
+                    <h3>Recipes</h3>
+                    <h5 class="text-black">Input Recipes that you want to share with others.</h5>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="fas fa-shopping-cart text-primary"></i>
+                    <h3>Compile</h3>
+                    <h5 class="text-black">Create a shopping list of what you will need.</h5>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="icon-eye text-primary"></i>
+                    <h3>Calculate</h3>
+                    <h5 class="text-black">Calculate how much you will need to spend.</h5>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="fas fa-check text-primary"></i>
+                    <h3>Free</h3>
+                    <h5 class="text-black">It's free. What's not to love?</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+</center>
+
+{% endblock %}

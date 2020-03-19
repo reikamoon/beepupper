@@ -116,9 +116,9 @@ def list_delete(list_id):
     return redirect(url_for('view_lists'))
 
 # Routes Pertaining to the Sales Calculator
-@app.route('/calculator')
+@app.route('/salescalculator')
 def calculator():
-    return render_template('calculator.html')
+    return render_template('salescalculator.html')
 
 # Routes pertaining to the About Page
 @app.route('/about')
