@@ -1,8 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% include 'partials/navbar_b.html' %}
+
+<center>
 <!-- Sales Calculator by omnicalculator -->
 <div class="omni-calculator" data-calculator="finance/percent-off" data-width="300" data-config='{}' data-currency="USD" data-show-row-controls="false" data-version="3" data-t="1578536453582">
-  <div class="omni-calculator-header">Percent Off Calculator</div>
+  <div class="omni-calculator-header">Sales Calculator</div>
   <div class="omni-calculator-footer">
     <a href="https://www.omnicalculator.com/finance/percent-off" target="_blank"><img alt="Omni" class="omni-calculator-logo" src="https://cdn.omnicalculator.com/embed/omni-calculator-logo-long.svg" /></a>
   </div>
 </div>
 <script async src="https://cdn.omnicalculator.com/sdk.js"></script>
+</center>
+
+{% endblock %}

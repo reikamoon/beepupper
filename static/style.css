@@ -59,17 +59,14 @@ header {
 
 
 footer {
-  padding: 25px 0;
   text-align: center;
-  left: 0;
   bottom: 0;
   width: 100%;
-  text-align: center;
-  background: #C7CACC;
+  background: #475C7B;
   color: white;
-  height: 10vh;
-  display: flex;
   align-items: center;
+  flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  padding: 20px;
   
 }
 
@@ -100,7 +97,7 @@ header {
   position: relative;
   width: 1170px;
   height: 400px;
-  background: url(/./header.png) no-repeat center;
+  background: url(./header.png) no-repeat center;
   background-size: cover;
   margin: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -140,4 +137,14 @@ header {
   background-color: white;
   height: 1000px;
   width: 1170px;
+}
+
+.jumbotron {
+  position: relative;
+  width: 1170px;
+  height: 900px;
+  /* background: url(./header.png) no-repeat center;
+  background-size: cover; */
+  margin: auto;
+  background-color: green;
 }
