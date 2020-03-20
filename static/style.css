@@ -140,7 +140,19 @@ header {
 .jumbotron {
   position: relative;
   width: 1170px;
-  height: 500px;
+  height: 1250px;
   margin: auto;
   background-color: rgb(173, 255, 173);
+}
+
+.h2 {
+  color:#003F5A;
+}
+
+.h3 {
+  color:#003F5A;
+}
+
+.h4 {
+  color:#003F5A;
 }
