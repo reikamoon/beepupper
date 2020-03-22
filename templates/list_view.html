@@ -68,7 +68,7 @@ and how much money you'll have leftover if you bought everything on the list. --
 <ul>
 <!-- Product Name, then the image which also leads to the page the product is on aka the URl set to the product. Delete icon is a trash can. -->
 {% for product in list.products %}
-<center><li>{{ product.name }}
+<center><li>{{ recipe.name }}
 <a href='{{ product.URL }}'><img src="{{ product.image_url }}" alt= "Product" height= "100" width = "100" ></a>
 <br>
 Price: ${{ product. price }}
