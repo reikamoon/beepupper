@@ -39,6 +39,8 @@ header {
   margin:5px 12px;
   padding:5px 0;
   transition:0.5s ease-in-out;
+  color: white;
+
 }
 
 #links a::before {
@@ -120,7 +122,16 @@ header {
   color: #003F5A;
   text-transform: uppercase;
   text-align: center;
+  font-weight: bold;
+  font-size: 4em;
+  transition: all 500ms;
 }
+
+.container h1:hover {
+  font-size:88px;
+  font-size-adjust: 20px;
+}
+
 
 .cont0 {
   height: 100%;
@@ -155,4 +166,24 @@ header {
 
 .h4 {
   color:#003F5A;
+}
+
+.logo-image {
+ transform: scaleX(-1);
+  transition: 0.3s;
+  opacity: 0.6;
+
+}
+
+.logo-image:hover {
+opacity: 1;
+
+}
+
+#linkscont {
+  padding-left: 100px;
+}
+
+.logo {
+  color: white;
 }
