@@ -13,6 +13,7 @@ client = MongoClient(host=f'{host}?retryWrites=false')
 db = client.get_default_database()
 lists = db.lists
 products = db.products
+recipes = db.recipes
 
 app = Flask(__name__, static_url_path='')
 
@@ -203,6 +204,61 @@ def calculator():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+#Tentative Recipe routes 
+
+@app.route('/recipes')
+def recipes():
+    return render_template('own_recipes.html.html', recipes=recipes.find())
+
+@app.route('/recipes/new')
+def recipe_new():
+    """Create new recipe"""
+    return render_template('recipe_new.html', recipe={}, title='Want a new recipe?')
+
+@app.route('/recipes/<recipe_id>')
+def show(recipe_id):
+     "Shows recipes in detail"
+     recipe = recipes.find_one({'_id': ObjectId(recipe_id)})
+     return render_template('recipe_show.html', recipe=recipe)
+
+@app.route('/recipes/<recipe_id>/edit')
+def recipe_edit(recipe_id):
+    """Edit recipes if needed."""
+    recipe = recipes.find_one({'_id': ObjectId(recipe_id)})
+    return render_template('recipe_edit.html', recipe=recipe, title="Edit current recipe")
+
+@app.route('/recipes', methods=['POST'])
+def submit_recipe():
+    recipe = {
+        'name': request.form.get('name'),
+        'url': request.form.get('url'),
+        'ingredients': request.form.get('ingredients'),
+        'steps': request.form.get('steps')
+    }
+    recipe_id = recipes.insert_one(recipe).inserted_id
+    return redirect(url_for('show', recipe_id=recipe_id))
+
+@app.route('/recipes/<recipe_id>', methods=['POST'])
+def update_recipe(recipe_id):
+    """Submit edited recipe."""
+    update_recipe = {
+        'name': request.form.get('name'),
+        'url': request.form.get('url'),
+        'ingredients': request.form.get('ingredients'),
+        'steps': request.form.get('steps'),
+    }
+    recipes.update_one(
+        {'_id': ObjectId(recipe_id)},
+        {'$set': update_recipe})
+    return redirect(url_for('show', recipe_id=recipe_id))
+
+@app.route('/recipes/<recipe_id>/delete', methods=['POST'])
+def recipe_del(recipe_id):
+    """Deletes recipes."""
+    recipes.delete_one({'_id': ObjectId(recipe_id)})
+    return redirect(url_for('index'))
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=os.environ.get('PORT', 5000))
