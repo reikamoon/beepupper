@@ -24,11 +24,6 @@ def home():
     #Home
     return render_template('index.html')
 
-@app.route('/today')
-def todo():
-    #Show To Do List
-    return render_template('today.html')
-
 @app.route('/mylists')
 def view_lists():
     #View all lists along with budget, total spent, and budget difference.
@@ -78,7 +73,7 @@ def submit_list():
 def edit_list(list_id):
     # Edit my shopping list
     product_list = lists.find_one({'_id': ObjectId(list_id)})
-    return render_template('Aedit_shoppinglist.html', list=product_list, list_id=list_id, products=product_list['products'])
+    return render_template('shoppinglist_edit.html', list=product_list, list_id=list_id, products=product_list['products'])
 
 @app.route('/mylists/<list_id>/edit', methods=['POST'])
 def list_update(list_id):
@@ -106,7 +101,7 @@ def list_delete(list_id):
 def new_product(list_id):
     #Create a new product
     list = lists.find_one({'_id': ObjectId(list_id)})
-    return render_template('Bnew_product.html', list=list, product=None)
+    return render_template('product_new.html', list=list, product=None)
 
 @app.route('/mylists/<list_id>', methods=['POST'])
 def submit_product(list_id):
@@ -119,7 +114,6 @@ def submit_product(list_id):
         'URL': request.form.get('url'),
         'image_url': request.form.get('image_url')
     }
-    print("New product: ", new_product)
     product_list.append(new_product)
     lists.update_one(
     {'_id': ObjectId(list_id)},
@@ -190,7 +184,7 @@ def tools():
 def about():
     return render_template('about.html')
 
-#Tentative Recipe routes 
+#Tentative Recipe routes
 
 @app.route('/recipes')
 def recipes():

@@ -1,0 +1,13 @@
+<!-- new product -->
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Include navbar on EVERY page -->
+{% include 'partials/side_nav.html' %}
+
+<form action="/mylists/{{list._id}}" method="post">
+{% include 'partials/product_form.html' %}
+<button class='btn btn-primary' type='submit'>Submit</button>
+</form>
+
+{% endblock content %}
