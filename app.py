@@ -17,12 +17,68 @@ recipes = db.recipes
 
 app = Flask(__name__, static_url_path='')
 
-# RECIPE_API_KEY = os.getenv("RECIPE_API_KEY") #set the api key #get it from our invisible .ENV file
+ApiKey = os.getenv("RECIPE_API_KEY") #set the api key #get it from our invisible .ENV file
 
 @app.route('/')
 def home():
     #Home
     return render_template('index.html')
+
+@app.route('/search')
+def search():
+    return render_template('search.html')
+
+@app.route('/results')
+def results():
+    search_term = request.args.get('user_input')
+
+
+    params = {
+        'query': search_term,
+        'apiKey': ApiKey,
+        'number': 6
+    }
+
+    url = "https://api.spoonacular.com/recipes/search"
+
+
+    r = requests.get(url, params=params)
+    if r.status_code == 200:
+        json_recipes = json.loads(r.content)
+        recipes = json_recipes['results']
+        return render_template('results.html', recipes=recipes)
+
+@app.route('/results/<id>')
+def display(id):
+    params = {
+        'id': id,
+        "apiKey": ApiKey
+    }
+    url = f"https://api.spoonacular.com/recipes/{id}/information"
+    r = requests.get(url, params=params)
+    if r.status_code == 200:
+        json_recipe = json.loads(r.content)
+        ingredients = json_recipe['extendedIngredients']
+        image = json_recipe['image']
+    else:
+        return "error"
+
+    for ingredient in ingredients:
+        ingredient['amount'] = str(ingredient['amount']).rstrip('.0')
+        ingredient['amount'] = str(ingredient['amount']).strip('0')
+
+    instructions_params = {
+        'apiKey': ApiKey
+    }
+    instructions_url = f"https://api.spoonacular.com/recipes/{id}/analyzedInstructions"
+
+    req = requests.get(instructions_url, params=instructions_params)
+    if req.status_code == 200:
+        json_instructions = json.loads(req.content)
+        steps = json_instructions[0]["steps"]
+    else:
+        return "error"
+    return render_template('single_recipe.html', ingredients=ingredients, steps=steps, recipe_id=id, image=image)
 
 @app.route('/today')
 def todo():
@@ -192,39 +248,39 @@ def about():
 
 #Tentative Recipe routes 
 
-@app.route('/recipes')
+@app.route('/Myrecipes')
 def recipes():
-    return render_template('own_recipes.html.html', recipes=recipes.find())
+    return render_template('own_recipes.html')
 
-@app.route('/recipes/new')
-def recipe_new():
+@app.route('/Myrecipes/new')
+def add_recipe():
     """Create new recipe"""
     return render_template('recipe_new.html', recipe={}, title='Want a new recipe?')
 
-@app.route('/recipes/<recipe_id>')
-def show(recipe_id):
+@app.route('/Myrecipes/<recipe_id>')
+def show_recipe(recipe_id):
      "Shows recipes in detail"
      recipe = recipes.find_one({'_id': ObjectId(recipe_id)})
      return render_template('recipe_show.html', recipe=recipe)
 
-@app.route('/recipes/<recipe_id>/edit')
+@app.route('/Myrecipes/<recipe_id>/edit')
 def recipe_edit(recipe_id):
     """Edit recipes if needed."""
     recipe = recipes.find_one({'_id': ObjectId(recipe_id)})
     return render_template('recipe_edit.html', recipe=recipe, title="Edit current recipe")
 
-@app.route('/recipes', methods=['POST'])
+@app.route('/Myrecipes', methods=['POST'])
 def submit_recipe():
-    recipe = {
+    new_recipe = {
         'name': request.form.get('name'),
         'url': request.form.get('url'),
         'ingredients': request.form.get('ingredients'),
         'steps': request.form.get('steps')
     }
-    recipe_id = recipes.insert_one(recipe).inserted_id
-    return redirect(url_for('show', recipe_id=recipe_id))
+    recipe_id = recipes.insert_one(new_recipe).inserted_id
+    return redirect(url_for('show_recipe', recipe_id=recipe_id))
 
-@app.route('/recipes/<recipe_id>', methods=['POST'])
+@app.route('/Myrecipes/<recipe_id>', methods=['POST'])
 def update_recipe(recipe_id):
     """Submit edited recipe."""
     update_recipe = {
@@ -238,11 +294,13 @@ def update_recipe(recipe_id):
         {'$set': update_recipe})
     return redirect(url_for('show', recipe_id=recipe_id))
 
-@app.route('/recipes/<recipe_id>/delete', methods=['POST'])
+@app.route('/Myrecipes/<recipe_id>/delete', methods=['POST'])
 def recipe_del(recipe_id):
     """Deletes recipes."""
     recipes.delete_one({'_id': ObjectId(recipe_id)})
     return redirect(url_for('index'))
+
+
 
 
 if __name__ == '__main__':
