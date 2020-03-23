@@ -2,19 +2,20 @@
 {% include 'partials/navbar.html' %}
 
 {% block content %}
-<a href="/Myrecipes/new">New</a>
-{% for recipe in recipes %}
 <div class="container">
+<h1><a href="/Myrecipes/new">New Recipe?</a></h1>
+{% for recipe in recipes %}
     <div class="row">
       <div class="col-sm">
       <div class="card h-100">
 
-        <div id="rname"><h3><a href= '/recipes/{{ recipe._id }}'>{{ recipe.name }}</h3></a></div>
+     <h5><a href= '/Myrecipes/{{ recipe._id }}'>{{ recipe.name }}</h5></a>
             <div class="card-body">
                 <h4 class="card-title">
             <img src="{{ recipe.url }}" class="w3-round">
-            <div id="ing"><h4><a href= '/recipes/{{ recipe._id }}'>{{ recipe.ingredients }}</h4></a></div>
-            <div id="steps"><h2><a href= '/recipes/{{ recipe._id }}'>{{ recipe.steps }}</h2></a></div>
+            <div id="ing"><h4><a href= '/Myrecipes/{{ recipe._id }}'>{{ recipe.ingredients }}</h4></a></div>
+            <div id="steps"><h2><a href= '/Myrecipes/{{ recipe._id }}'>{{ recipe.steps }}</h2></a></div>
+            </div>
 
 
 </div>

@@ -363,6 +363,19 @@ opacity: 1;
   margin-top: 100px;
 }
 
+.edit-del {
+margin-top: -300px;
+text-align: center;
+}
 
 
 
+.card-body {
+  text-align: center;
+}
+
+h5 {
+  text-align: center;
+  font-weight: bold;
+  text-transform: 
+}

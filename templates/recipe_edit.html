@@ -1,13 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-{% include 'partials/navbar_b.html' %}
 <div class='container4'>
-        <form method='POST' action='/Myrecipes'>
+        <form method='POST' action='/Myrecipes/{{recipe._id}}'>
             <input type='hidden' name='_method' value='PUT'/>
             {% include 'partials/submission.html' %}
             <div class='form-group'>
                 </div>
-            <button type='submit'>Save</button>
+            <button type='submit'>Save Edit</button>
             </div>
 
         </form>

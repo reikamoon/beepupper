@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 <a href='/'>Back</a>
 {% block content %}
+{% include 'partials/navbar_b.html' %}
 <div class="container">
     <div class="row">
       <div class="col-sm">
@@ -12,8 +13,10 @@
 <h4>{{ recipe.ingredients }}</h4>
 <h4>{{ recipe.steps }}</h4>
 </div>
-<p><a href='/recipes/{{ recipe._id }}/edit'>Edit</a></p>
-<p><form method='POST' action='/recipes/{{ recipe._id }}/delete'>
+<div class="edit-del">
+<p><a href='/Myrecipes/{{ recipe._id }}/edit'>Edit</a></p>
+<p><form method='POST' action='/Myrecipes/{{ recipe._id }}/delete'>
     <button type='submit'>Delete</button></p>
+</div>
 
 {% endblock %}

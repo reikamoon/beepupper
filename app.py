@@ -13,7 +13,7 @@ client = MongoClient(host=f'{host}?retryWrites=false')
 db = client.get_default_database()
 lists = db.lists
 products = db.products
-recipes = db.recipes
+recipes = db.recipes 
 
 app = Flask(__name__, static_url_path='')
 
@@ -24,7 +24,6 @@ def home():
     #Home
     return render_template('index.html')
 
-<<<<<<< HEAD
 @app.route('/search')
 def search():
     return render_template('search.html')
@@ -86,8 +85,6 @@ def todo():
     #Show To Do List
     return render_template('today.html')
 
-=======
->>>>>>> 2aa5916df1c82b446321792eb452059341b35e14
 @app.route('/mylists')
 def view_lists():
     #View all lists along with budget, total spent, and budget difference.
@@ -137,7 +134,7 @@ def submit_list():
 def edit_list(list_id):
     # Edit my shopping list
     product_list = lists.find_one({'_id': ObjectId(list_id)})
-    return render_template('shoppinglist_edit.html', list=product_list, list_id=list_id, products=product_list['products'])
+    return render_template('Aedit_shoppinglist.html', list=product_list, list_id=list_id, products=product_list['products'])
 
 @app.route('/mylists/<list_id>/edit', methods=['POST'])
 def list_update(list_id):
@@ -165,7 +162,7 @@ def list_delete(list_id):
 def new_product(list_id):
     #Create a new product
     list = lists.find_one({'_id': ObjectId(list_id)})
-    return render_template('product_new.html', list=list, product=None)
+    return render_template('Bnew_product.html', list=list, product=None)
 
 @app.route('/mylists/<list_id>', methods=['POST'])
 def submit_product(list_id):
@@ -178,6 +175,7 @@ def submit_product(list_id):
         'URL': request.form.get('url'),
         'image_url': request.form.get('image_url')
     }
+    print("New product: ", new_product)
     product_list.append(new_product)
     lists.update_one(
     {'_id': ObjectId(list_id)},
@@ -198,6 +196,7 @@ def product_delete(list_id, product_name):
     {'$set': {'products': product_list}})
     return redirect(url_for('view_lists'))
 
+
 # Routes Pertaining to the Sales Calculator/Kitchen Timer
 @app.route('/tools')
 def tools():
@@ -208,11 +207,11 @@ def tools():
 def about():
     return render_template('about.html')
 
-#Tentative Recipe routes
+#Routes for Recipe 
 
 @app.route('/Myrecipes')
-def recipes():
-    return render_template('own_recipes.html')
+def recipes_index():
+    return render_template('own_recipes.html', recipes=recipes.find())
 
 @app.route('/Myrecipes/new')
 def add_recipe():
@@ -223,7 +222,7 @@ def add_recipe():
 def show_recipe(recipe_id):
      "Shows recipes in detail"
      recipe = recipes.find_one({'_id': ObjectId(recipe_id)})
-     return render_template('recipe_show.html', recipe=recipe)
+     return render_template('show_recipe.html', recipe=recipe)
 
 @app.route('/Myrecipes/<recipe_id>/edit')
 def recipe_edit(recipe_id):
@@ -254,13 +253,13 @@ def update_recipe(recipe_id):
     recipes.update_one(
         {'_id': ObjectId(recipe_id)},
         {'$set': update_recipe})
-    return redirect(url_for('show', recipe_id=recipe_id))
+    return redirect(url_for('show_recipe', recipe_id=recipe_id))
 
 @app.route('/Myrecipes/<recipe_id>/delete', methods=['POST'])
 def recipe_del(recipe_id):
     """Deletes recipes."""
     recipes.delete_one({'_id': ObjectId(recipe_id)})
-    return redirect(url_for('index'))
+    return redirect(url_for('recipes_index'))
 
 
 
