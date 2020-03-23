@@ -1,13 +1,12 @@
-<!-- Add a List -->
+<!-- Edit an entry in the shopping list -->
 {% extends 'base.html' %}
-
 {% block content %}
 
 <!-- Include navbar on EVERY page -->
 {% include 'partials/side_nav.html' %}
 
-<center><h1>Create a New List</h1></center>
-<form action="/mylists" method="post">
+<form action="/mylists/{{ list._id }}/edit" method="POST">
 {% include 'partials/list_form.html' %}
 <center><button class='btn btn-primary' type='submit'>Submit</button></center>
+
 {% endblock content %}

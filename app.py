@@ -24,6 +24,7 @@ def home():
     #Home
     return render_template('index.html')
 
+<<<<<<< HEAD
 @app.route('/search')
 def search():
     return render_template('search.html')
@@ -85,6 +86,8 @@ def todo():
     #Show To Do List
     return render_template('today.html')
 
+=======
+>>>>>>> 2aa5916df1c82b446321792eb452059341b35e14
 @app.route('/mylists')
 def view_lists():
     #View all lists along with budget, total spent, and budget difference.
@@ -134,7 +137,7 @@ def submit_list():
 def edit_list(list_id):
     # Edit my shopping list
     product_list = lists.find_one({'_id': ObjectId(list_id)})
-    return render_template('Aedit_shoppinglist.html', list=product_list, list_id=list_id, products=product_list['products'])
+    return render_template('shoppinglist_edit.html', list=product_list, list_id=list_id, products=product_list['products'])
 
 @app.route('/mylists/<list_id>/edit', methods=['POST'])
 def list_update(list_id):
@@ -162,7 +165,7 @@ def list_delete(list_id):
 def new_product(list_id):
     #Create a new product
     list = lists.find_one({'_id': ObjectId(list_id)})
-    return render_template('Bnew_product.html', list=list, product=None)
+    return render_template('product_new.html', list=list, product=None)
 
 @app.route('/mylists/<list_id>', methods=['POST'])
 def submit_product(list_id):
@@ -175,7 +178,6 @@ def submit_product(list_id):
         'URL': request.form.get('url'),
         'image_url': request.form.get('image_url')
     }
-    print("New product: ", new_product)
     product_list.append(new_product)
     lists.update_one(
     {'_id': ObjectId(list_id)},
@@ -196,46 +198,6 @@ def product_delete(list_id, product_name):
     {'$set': {'products': product_list}})
     return redirect(url_for('view_lists'))
 
-# # Routes for Recipes
-# @app.route('/mylists/<list_id>/new')
-# def new_recipe(list_id):
-#     #Create a new recipe
-#     list = lists.find_one({'_id': ObjectId(list_id)})
-#     return render_template('Bnew_recipe.html', list=list, product=None)
-
-# @app.route('/mylists/<list_id>', methods=['POST'])
-# def submit_recipe(list_id):
-#     #Submit Recipe to Database and add to list
-#     recipe_list = lists.find_one({'_id': ObjectId(list_id)})['recipes']
-#     print("Recipe list: ", recipe_list)
-#     new_recipe = {
-#         'name': request.form.get('name'),
-#         'servings': request.form.get('serving'),
-#         'ingredients': request.form.get('ingredients'),
-#         'directions': request.form.get('dorections'),
-#         # 'URL': request.form.get('url'),
-#         # 'image_url': request.form.get('image_url')
-#     }
-#     print("New recipe: ", new_recipe)
-#     recipe_list.append(new_recipe)
-#     lists.update_one(
-#     {'_id': ObjectId(list_id)},
-#     {'$set': {'recipes': recipe_list}})
-#     return redirect(url_for('show_list', list_id=list_id))
-
-# @app.route('/mylists/<list_id>/delete/<recipe_name>')
-# def recipe_delete(list_id, recipe_name):
-#     #Delete a product
-#     recipe_list = lists.find_one({'_id': ObjectId(list_id)})['recipes']
-#     for product in recipe_list:
-#         if recipe['name'] == recipe_name:
-#             recipe_list.remove(recipe)
-#             break
-#     lists.update_one(
-#     {'_id': ObjectId(list_id)},
-#     {'$set': {'recipes': recipe_list}})
-#     return redirect(url_for('view_lists'))
-
 # Routes Pertaining to the Sales Calculator/Kitchen Timer
 @app.route('/tools')
 def tools():
@@ -246,7 +208,7 @@ def tools():
 def about():
     return render_template('about.html')
 
-#Tentative Recipe routes 
+#Tentative Recipe routes
 
 @app.route('/Myrecipes')
 def recipes():
