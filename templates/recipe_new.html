@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container4">
+<form method='POST' action='/Myrecipes'>
+    {% include 'partials/submission.html' %}
+    <button type='submit'>Save</button>
+    </form>
+</div>
+
+{% endblock %}

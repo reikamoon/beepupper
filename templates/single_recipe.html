@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% include 'partials/navbar_b.html' %}
+
+<div class="card">
+
+    <div class="thumbnail">
+        <div class="recipe-image">
+            <img src="{{ image }}" alt="recipe image">
+</div>
+</div>
+
+<div class="ingredients">
+    {% for ingredient in ingredients %}
+    
+        <p>{{ ingredient.amount }} {{ ingredient.measures.us.unitShort }} {{ ingredient.name }}</p>
+
+    {% endfor %}
+    </div>
+
+    <div class="card2 scroll">
+        <div class="steps">
+        {% for step in steps %}
+            <h6>{{ step.number }}. {{ step.step }}</h6><br>
+        {% endfor %}
+        </div>
+    </div>
+    
+    
+    {% endblock %}

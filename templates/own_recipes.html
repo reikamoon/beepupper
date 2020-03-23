@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% include 'partials/navbar.html' %}
+
+{% block content %}
+<a href="/Myrecipes/new">New</a>
+{% for recipe in recipes %}
+<div class="container">
+    <div class="row">
+      <div class="col-sm">
+      <div class="card h-100">
+
+        <div id="rname"><h3><a href= '/recipes/{{ recipe._id }}'>{{ recipe.name }}</h3></a></div>
+            <div class="card-body">
+                <h4 class="card-title">
+            <img src="{{ recipe.url }}" class="w3-round">
+            <div id="ing"><h4><a href= '/recipes/{{ recipe._id }}'>{{ recipe.ingredients }}</h4></a></div>
+            <div id="steps"><h2><a href= '/recipes/{{ recipe._id }}'>{{ recipe.steps }}</h2></a></div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+{% endfor %}
+{% endblock %}

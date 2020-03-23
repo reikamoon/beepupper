@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+<a href='/'>Back</a>
+{% block content %}
+<div class="container">
+    <div class="row">
+      <div class="col-sm">
+      <div class="card h-100">
+<h1>{{ recipe.name }}</h1>
+<div class="card-body">
+    <h4 class="card-title">
+<img class='center' width="800" height="700" src="{{ recipe.url }}"></img>
+<h4>{{ recipe.ingredients }}</h4>
+<h4>{{ recipe.steps }}</h4>
+</div>
+<p><a href='/recipes/{{ recipe._id }}/edit'>Edit</a></p>
+<p><form method='POST' action='/recipes/{{ recipe._id }}/delete'>
+    <button type='submit'>Delete</button></p>
+
+{% endblock %}
