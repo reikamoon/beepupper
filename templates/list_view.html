@@ -45,7 +45,7 @@ ul li:hover {
 
 .close:hover {background: #bbb;}
 
-.miki {
+.fontsizechange {
   font-size: 40px;
   color: black;
 }
@@ -59,8 +59,8 @@ and how much money you'll have leftover if you bought everything on the list. --
 <center><h2>Total Cost of this List: ${{ listsum|round(2) }}</h2></center>
 <center><h2>Budget - Total Cost = ${{ budgetdiff|round(2) }}</h2></center>
 <center>
-<!-- Miki is a class used to change font sizes -->
-<div class = "miki">
+
+<div class = "fontsizechange">
 <a  href= "/mylists/{{ list._id }}/edit"><i class="fa fa-pencil-square-o"></i> Edit List</a>
 <a  href= "/mylists/{{ list._id }}/new"><i class="fa fa-plus-circle"></i> Add a Product</a>
 </div>
@@ -68,11 +68,11 @@ and how much money you'll have leftover if you bought everything on the list. --
 <ul>
 <!-- Product Name, then the image which also leads to the page the product is on aka the URl set to the product. Delete icon is a trash can. -->
 {% for product in list.products %}
-<center><li>{{ recipe.name }}
+<center><li>{{ product.name }}
 <a href='{{ product.URL }}'><img src="{{ product.image_url }}" alt= "Product" height= "100" width = "100" ></a>
 <br>
 Price: ${{ product. price }}
-<a class="miki" type="miki" href= "/mylists/{{ list._id }}/delete/{{ product.name }}"><i class="fa fa-trash"></i></a>
+<a class="fontsizechange" type="fontsizechange" href= "/mylists/{{ list._id }}/delete/{{ product.name }}"><i class="fa fa-trash"></i></a>
 </li></center>
 {% endfor %}
 </ul>

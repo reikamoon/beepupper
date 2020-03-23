@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% include 'partials/navbar_b.html' %}
+
+{% block content %}
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.btn {
+  background-color: #0066cc;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+.bpcontainer {
+background-color: rgb(227, 242, 252);
+padding: 12px 16px;
+font-size: 40px;
+}
+</style>
+
+<br><br><br>
+<div class = "bpcontainer">
+<center><h1>Shopping Lists</h1></center>
+<!-- New List button -->
+<center><a  href= "/mylists/new/list"><i class="fa fa-plus-circle"></i> New List</a>
+</center>
+<br>
+{% include 'partials/grid_view.html' %}
+</div>
+{% endblock content %}

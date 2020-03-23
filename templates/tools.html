@@ -1,0 +1,54 @@
+<!-- Calculator Page Here -->
+<!-- calculator -->
+<!-- Split screen so user can have access to both the sales calculator and the normal calculator simultaneously -->
+{% block content %}
+
+<style>
+  .split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+  .left {
+    left: 0;
+    background-color: #39A9E8;
+  }
+
+  .right {
+    right: 0;
+    background-color: #39A9E8;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .centered img {
+    width: 150px;
+    border-radius: 50%;
+  }
+</style>
+
+<!-- Sales Calculator -->
+<div class="split left">
+  <div class="centered">
+    {% include 'partials/salescalculator.html' %}
+  </div>
+</div>
+
+<!-- Kitchen Timer -->
+<div class="split right">
+  <div class="centered">
+  {% include 'partials/kitchen_timer.html' %}
+  </div>
+</div>
+{% endblock content %}

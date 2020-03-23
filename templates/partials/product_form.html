@@ -1,0 +1,29 @@
+<!-- Icons:  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Form for Shopping List -->
+<fieldset>
+<legend><center><h1>Add an Entry to Shopping List</h1></center></legend>
+<!-- Name -->
+<h1><center><div class='form-group'>
+      <label for='name'>Name</label><br>
+      <input class='form-control' id='name' type='text' name='name' value='{{ product.name }}'/>
+  </div>
+
+<!-- Price -->
+<div class='form-group'>
+      <label for='price'>Price</label><br>
+      <input class='form-control' id='price' type='text' name='price' value='{{ product.price }}'/>
+  </div>
+
+<!-- URL -->
+<div class ='form-group'>
+    <label for='url'>URL</label><br>
+    <input class ='form-control' id='url' type='url' name='url' value= '{{ product.URL }}'/>
+    </div>
+
+<!-- Image URL -->
+<div class='form-group'>
+      <label for='image-url'>Image</label><br>
+      <input class='form-control' id='image-url' type='url' name='image_url' value='{{ product.image_url }}'/>
+  </div></center></h1>
+</fieldset>

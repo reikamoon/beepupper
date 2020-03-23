@@ -23,21 +23,6 @@ def home():
     #Home
     return render_template('index.html')
 
-# def index(): #homepage
-#     limit = request.args.get("search_limit",10) #set limit, if none then put 10
-#     search_term = request.args.get("search_result", "random") #search_term will contain search_result, else it will be random
-
-#     recipe_json = get_recipe_json(search_term, RECIPE_API_KEY, limit)
-
-#     return render_template('index.html', recipe_json = recipe_json)
-
-# def get_recipe_json(search_term, apiKey, limit):
-#     r = requests.get("https://api.spoonacular.com/recipes/search" % (search_term, apiKey, limit)) #get our gifs and applying our parameters
-#     if r.status_code == 200:
-#         return r.json() #return json
-#     else:
-#         return None
-
 @app.route('/today')
 def todo():
     #Show To Do List
@@ -55,7 +40,7 @@ def view_lists():
         for products in product_list: #For every product on the shopping list, add up all the prices to get the total.
             listsum += float(products['price'])
         prices[list['_id']] = listsum
-    return render_template('Ashow_shoppinglist.html', lists=lists.find(), prices=prices)
+    return render_template('shoppinglist_show.html', lists=lists.find(), prices=prices)
 
 @app.route('/mylists/<list_id>', methods=['GET'])
 def show_list(list_id):
@@ -75,7 +60,7 @@ def show_list(list_id):
 @app.route('/mylists/new/list')
 def new_list():
     #Create a New List
-    return render_template('Anew_shoppinglist.html', list={}, title='New List', products=[None])
+    return render_template('shoppinglist_new.html', list={}, title='New List', products=[None])
 
 @app.route('/mylists', methods=['POST'])
 def submit_list():
@@ -194,10 +179,10 @@ def product_delete(list_id, product_name):
 #     {'$set': {'recipes': recipe_list}})
 #     return redirect(url_for('view_lists'))
 
-# Routes Pertaining to the Sales Calculator
-@app.route('/salescalculator')
-def calculator():
-    return render_template('salescalculator.html')
+# Routes Pertaining to the Sales Calculator/Kitchen Timer
+@app.route('/tools')
+def tools():
+    return render_template('tools.html')
 
 # Routes pertaining to the About Page
 @app.route('/about')

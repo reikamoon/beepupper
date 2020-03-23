@@ -1,0 +1,25 @@
+<!-- Icons:  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- form to edit/add lists -->
+<fieldset>
+<legend></legend>
+      <!-- Title -->
+<h1><center><div class='form-group'>
+      <label for='list-name'><i class="fas fa-shopping-cart"></i> Enter a Name for your List:</label><br>
+      <input class='form-control' id='title' type='text' name='title' value='{{ list.title }}'/>
+      <!-- Budget -->
+      <label for='list-budget'><i class="fas fa-dollar-sign"></i> Enter a Budget:</label><br>
+      <input class='form-control' id='budget' type='text' name='budget' value='{{ list.budget }}'/>
+      <!-- Add a Starting Item -->
+      <label for='list-products'><i class="fas fa-shopping-basket"></i> Add a Starting Item:</label><br><br>
+      <!-- Show a Form for as many products are present in the list: -->
+      {% if products != None %}
+        {% for product in products %}
+        {% include 'partials/product_form.html' %}
+        {% endfor %}
+      {% else %}
+        {% include 'partials/product_form.html' %}
+      {% endif %}
+  </div>
+</center></h1>
+</fieldset>
