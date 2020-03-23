@@ -115,6 +115,85 @@ def list_delete(list_id):
     lists.delete_one({'_id': ObjectId(list_id)})
     return redirect(url_for('view_lists'))
 
+# Routes for Products
+@app.route('/mylists/<list_id>/new')
+def new_product(list_id):
+    #Create a new product
+    list = lists.find_one({'_id': ObjectId(list_id)})
+    return render_template('Bnew_product.html', list=list, product=None)
+
+@app.route('/mylists/<list_id>', methods=['POST'])
+def submit_product(list_id):
+    #Submit Product to Database and add to list
+    product_list = lists.find_one({'_id': ObjectId(list_id)})['products']
+    print("Product list: ", product_list)
+    new_product = {
+        'name': request.form.get('name'),
+        'price': request.form.get('price'),
+        'URL': request.form.get('url'),
+        'image_url': request.form.get('image_url')
+    }
+    print("New product: ", new_product)
+    product_list.append(new_product)
+    lists.update_one(
+    {'_id': ObjectId(list_id)},
+    {'$set': {'products': product_list}})
+    return redirect(url_for('show_list', list_id=list_id))
+
+
+@app.route('/mylists/<list_id>/delete/<product_name>')
+def product_delete(list_id, product_name):
+    #Delete a product
+    product_list = lists.find_one({'_id': ObjectId(list_id)})['products']
+    for product in product_list:
+        if product['name'] == product_name:
+            product_list.remove(product)
+            break
+    lists.update_one(
+    {'_id': ObjectId(list_id)},
+    {'$set': {'products': product_list}})
+    return redirect(url_for('view_lists'))
+
+# # Routes for Recipes
+# @app.route('/mylists/<list_id>/new')
+# def new_recipe(list_id):
+#     #Create a new recipe
+#     list = lists.find_one({'_id': ObjectId(list_id)})
+#     return render_template('Bnew_recipe.html', list=list, product=None)
+
+# @app.route('/mylists/<list_id>', methods=['POST'])
+# def submit_recipe(list_id):
+#     #Submit Recipe to Database and add to list
+#     recipe_list = lists.find_one({'_id': ObjectId(list_id)})['recipes']
+#     print("Recipe list: ", recipe_list)
+#     new_recipe = {
+#         'name': request.form.get('name'),
+#         'servings': request.form.get('serving'),
+#         'ingredients': request.form.get('ingredients'),
+#         'directions': request.form.get('dorections'),
+#         # 'URL': request.form.get('url'),
+#         # 'image_url': request.form.get('image_url')
+#     }
+#     print("New recipe: ", new_recipe)
+#     recipe_list.append(new_recipe)
+#     lists.update_one(
+#     {'_id': ObjectId(list_id)},
+#     {'$set': {'recipes': recipe_list}})
+#     return redirect(url_for('show_list', list_id=list_id))
+
+# @app.route('/mylists/<list_id>/delete/<recipe_name>')
+# def recipe_delete(list_id, recipe_name):
+#     #Delete a product
+#     recipe_list = lists.find_one({'_id': ObjectId(list_id)})['recipes']
+#     for product in recipe_list:
+#         if recipe['name'] == recipe_name:
+#             recipe_list.remove(recipe)
+#             break
+#     lists.update_one(
+#     {'_id': ObjectId(list_id)},
+#     {'$set': {'recipes': recipe_list}})
+#     return redirect(url_for('view_lists'))
+
 # Routes Pertaining to the Sales Calculator
 @app.route('/salescalculator')
 def calculator():

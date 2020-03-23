@@ -1,0 +1,80 @@
+<!-- shopping list view -->
+<!-- View a single Shopping List -->
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Include navbar on EVERY page -->
+{% include 'partials/navbar_b.html' %}
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #0066cc;
+  padding: 12px;
+  text-decoration: none;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 30px;
+  color: black;
+  display: block;
+  position: relative;
+}
+
+ul li:hover {
+  background-color: #eee;
+}
+
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  padding: 12px 16px;
+  transform: translate(0%, -50%);
+}
+
+.close:hover {background: #bbb;}
+
+.miki {
+  font-size: 40px;
+  color: black;
+}
+</style>
+<!-- show every product in single shopping list -->
+<!-- Format is the name of the list, the budget the list is set to, the total cost of everything on the list rounded two decimal spaces,
+and how much money you'll have leftover if you bought everything on the list. -->
+<br><br><br>
+<center><h1><b>{{ list.title }}</b></h1></center>
+<center><h1>Budget: ${{ list.budget }}</h1></center>
+<center><h2>Total Cost of this List: ${{ listsum|round(2) }}</h2></center>
+<center><h2>Budget - Total Cost = ${{ budgetdiff|round(2) }}</h2></center>
+<center>
+<!-- Miki is a class used to change font sizes -->
+<div class = "miki">
+<a  href= "/mylists/{{ list._id }}/edit"><i class="fa fa-pencil-square-o"></i> Edit List</a>
+<a  href= "/mylists/{{ list._id }}/new"><i class="fa fa-plus-circle"></i> Add a Product</a>
+</div>
+</center>
+<ul>
+<!-- Product Name, then the image which also leads to the page the product is on aka the URl set to the product. Delete icon is a trash can. -->
+{% for product in list.products %}
+<center><li>{{ recipe.name }}
+<a href='{{ product.URL }}'><img src="{{ product.image_url }}" alt= "Product" height= "100" width = "100" ></a>
+<br>
+Price: ${{ product. price }}
+<a class="miki" type="miki" href= "/mylists/{{ list._id }}/delete/{{ product.name }}"><i class="fa fa-trash"></i></a>
+</li></center>
+{% endfor %}
+</ul>
+
+{% endblock content %}
