@@ -1,0 +1,22 @@
+
+{% block content %}
+
+<legend>Recipe</legend>
+
+    <br><label for='name'>Name</label></br>
+    <input type='text' name='name' value="{{ recipe.name }}"/>
+
+  <br><label for='url'>Recipe Image</label></br>
+  <input type='url' name='url' value="{{ recipe.url }}"/>
+
+    <br><label for='ingredients'>Recipe's ingredients</label></br>
+   <textarea name="ingredients" class="textarea-field" value="{{ recipe.ingredients }}"></textarea>
+
+
+
+<br><label for='steps'>Recipe's steps</label></br>
+ <textarea name="steps" class="textarea-field" value=" {{ recipe.steps }}"></textarea>
+
+
+
+{% endblock %}
