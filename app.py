@@ -13,7 +13,7 @@ client = MongoClient(host=f'{host}?retryWrites=false')
 db = client.get_default_database()
 lists = db.lists
 products = db.products
-recipes = db.recipes 
+recipes = db.recipes
 
 app = Flask(__name__, static_url_path='')
 
@@ -134,7 +134,7 @@ def submit_list():
 def edit_list(list_id):
     # Edit my shopping list
     product_list = lists.find_one({'_id': ObjectId(list_id)})
-    return render_template('Aedit_shoppinglist.html', list=product_list, list_id=list_id, products=product_list['products'])
+    return render_template('shoppinglist_edit.html', list=product_list, list_id=list_id, products=product_list['products'])
 
 @app.route('/mylists/<list_id>/edit', methods=['POST'])
 def list_update(list_id):
@@ -162,7 +162,7 @@ def list_delete(list_id):
 def new_product(list_id):
     #Create a new product
     list = lists.find_one({'_id': ObjectId(list_id)})
-    return render_template('Bnew_product.html', list=list, product=None)
+    return render_template('product_new.html', list=list, product=None)
 
 @app.route('/mylists/<list_id>', methods=['POST'])
 def submit_product(list_id):
@@ -207,7 +207,7 @@ def tools():
 def about():
     return render_template('about.html')
 
-#Routes for Recipe 
+#Routes for Recipe
 
 @app.route('/Myrecipes')
 def recipes_index():
