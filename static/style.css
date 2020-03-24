@@ -190,7 +190,6 @@ opacity: 1;
 
 .recipes {
   float: left;
-  margin-bottom: 100px;
   margin-left: 100px;
   text-transform: uppercase;
   text-align: center;
@@ -407,4 +406,8 @@ letter-spacing: 0.1px;
 .row h5 {
   font-weight: bold;
   letter-spacing: 0.5;
+}
+
+.recipes a {
+  font-size: 10px;
 }
