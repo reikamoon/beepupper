@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 {% include 'partials/navbar_b.html' %}
+<center>
 <div class='container4'>
-        <form method='POST' action='/Myrecipes'>
-            <input type='hidden' name='_method' value='PUT'/>
-            {% include 'partials/submission.html' %}
-            <div class='form-group'>
-                </div>
+    <form method='POST' action='/Myrecipes'>
+        <input type='hidden' name='_method' value='PUT'/>
+        {% include 'partials/submission.html' %}
+        <div class='form-group'>
             <button type='submit'>Save</button>
-            </div>
-
-        </form>
-    </div>
+        </div>
+    </form>
+</div>
+</center>
 {% endblock %}

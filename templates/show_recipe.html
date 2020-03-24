@@ -6,20 +6,23 @@
 <div class="container">
     <div class="row">
       <div class="col-sm">
-      <div class="card h-100">
-<h2>{{ recipe.name }}</h2>
-<div class="card-body">
-    <h4 class="card-title">
-<img class='center' width="600" height="500" src="{{ recipe.url }}"></img>
-<h6>Ingredients</h6>
-<div id="ing">{{ recipe.ingredients }}</div>
-<h6>Steps</h6>
-<div id="steps2">{{ recipe.steps }}</div>
-</div>
-<div class="edit-del">
-<p><a href='/Myrecipes/{{ recipe._id }}/edit'>Edit</a></p>
-<p><form method='POST' action='/Myrecipes/{{ recipe._id }}/delete'>
-    <button type='submit'>Delete</button></p>
+        <div class="card h-100">
+            <h2>{{ recipe.name }}</h2>
+            <div class="card-body">
+                <h4 class="card-title">
+                <img class='center' width="600" height="500" src="{{ recipe.url }}"></img>
+                <h6>Ingredients</h6>
+                <div id="ing">{{ recipe.ingredients }}</div>
+                <h6>Steps</h6>
+                <div id="steps2">{{ recipe.steps }}</div>
+            </div>
+            <div class="edit-del">
+                <p><a href='/Myrecipes/{{ recipe._id }}/edit'>Edit</a></p>
+                <p><form method='POST' action='/Myrecipes/{{ recipe._id }}/delete'>
+                <button type='submit'>Delete</button></p>
+            </div>
+        </div>
+    </div>
 </div>
 </center>
 

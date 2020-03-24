@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
+<center>
 <div class='container4'>
         <form method='POST' action='/Myrecipes/{{recipe._id}}'>
             <input type='hidden' name='_method' value='PUT'/>
             {% include 'partials/submission_edit.html' %}
             <div class='form-group'>
-                </div>
-            <button type='submit'>Save Edit</button>
+                <button type='submit'>Save Edit</button>
             </div>
-
         </form>
     </div>
+</center>
 {% endblock %}

@@ -1,7 +1,11 @@
 <!-- Calculator Page Here -->
 <!-- calculator -->
 <!-- Split screen so user can have access to both the sales calculator and the normal calculator simultaneously -->
+{% extends 'base.html' %}
+
 {% block content %}
+
+{% include 'partials/navbar_b.html' %}
 
 <style>
   .split {
@@ -51,4 +55,5 @@
   {% include 'partials/kitchen_timer.html' %}
   </div>
 </div>
-{% endblock content %}
+
+{% endblock %}

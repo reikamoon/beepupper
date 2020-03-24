@@ -3,21 +3,14 @@
 
 {% include 'partials/navbar_b.html' %}
 
-
-
     {% for recipe in recipes %}
- 
     <div class="recipes">
-        
-
         <img src="https://spoonacular.com/recipeImages/{{ recipe.id }}-556x370.jpg" alt="recipe image">
-        <div class="title"><div class="overlay">{{ recipe.title }}</div>
-        <a href='/results/{{ recipe.id }}'>See Ingredients and Instructions</a>
+        <div class="title">
+            <div class="overlay">{{ recipe.title }}</div>
+                <a href='/results/{{ recipe.id }}'>See Ingredients and Instructions</a>
+        </div>
     </div>
-    </div>
-    </div>
-</div>
-
     {% endfor %}
 
 {% endblock %}
