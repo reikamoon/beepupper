@@ -9,10 +9,11 @@
 
 <!-- Will show list name, then budget set to list, then adds up the prices of the products on the list, and subtracts it from
 the budget, to show how much money you'll have leftover if you bought everything on the list. -->
+<center>
 {% for list in lists %}
 <div class="w3-row-padding w3-padding-16 w3-center" id="list">
 <div class="w3-quarter">
-<center><font size="10" color="black"><a href="mylists/{{ list._id }}">>{{ list.title }}</a></font>
+<center><font size="10" color="black"><a href="mylists/{{ list._id }}">>{{ list.title }}</a></font></center>
 <center><font size = "10" color = "black">Budget: ${{ list.budget }}</font></center>
 <!-- Rounds sum by 2 decimal points, to make things easier for the user. -->
 <center><font size = "5" color = "black">From this list, you spend ${{ prices[list._id]|round(2) }}</font></center>
