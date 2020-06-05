@@ -4,7 +4,7 @@
 
 Dates 3/16-3/25
 
-**Names:** Joanelly Cruz :strawberry:, Anjelica Ambrosio :ribbon:, Padyn Riddell :chicken:
+**Names:** Joanelly Cruz :strawberry:, Anjelica A :ribbon:, Padyn Riddell :chicken:
 
 
 **Project Name:** BeePupper
@@ -95,7 +95,7 @@ be deciding some of the Frontend aspects.**
 ### Sign off
 
 **Student Name:**                
-Anjelica Ambrosio :ribbon: /
+Anjelica A :ribbon: /
 Joanelly Cruz :strawberry: /
 Padyn Riddell :chicken: /
 Date: March 16, 2020
